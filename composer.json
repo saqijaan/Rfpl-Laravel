@@ -16,6 +16,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "attitude/rfpl-cache-php": "^0.1.7",
+        "attitude/rfpl-cache-php": "^0.1.7"
     }
 }
