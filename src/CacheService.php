@@ -1,9 +1,8 @@
 <?php
 
-namespace RfplLaravel\Service;
+namespace RfplLaravel;
 
-use Illuminate\Http\Request;
-use RFPL\Cache;
+use RfplLaravel\Services\Cache;
 
 class CacheService{
 

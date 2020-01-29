@@ -1,5 +1,5 @@
 {
-    "name": "saqib/rfpl",
+    "name": "saqib/rfpl-laravel",
     "description": "A RFPL packages for laravel",
     "type": "library",
     "license": "MIT",
@@ -14,8 +14,6 @@
             "RfplLaravel\\" : "src/"
         }
     },
-    "minimum-stability": "dev",
-    "require": {
-        "attitude/rfpl-cache-php": "^0.1.7"
-    }
+    "minimum-stability": "-stable",
+    "version": "1.0.0"
 }
