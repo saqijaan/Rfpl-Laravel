@@ -1,0 +1,21 @@
+{
+    "name": "saqib/rfpl",
+    "description": "A RFPL packages for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Saqib Ali",
+            "email": "saqiba874@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RfplLaravel\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "attitude/rfpl-cache-php": "^0.1.7",
+    }
+}
