@@ -39,7 +39,7 @@ class CacheService{
         /**
          * Serve Cache for this route if this is not in exception list
          */
-        if ( !$this->inExceptArray($this->url) ){
+        if ( !$this->inExceptArray($this->url) && !$this->isAjax()){
             $options = [];
 
             if ( $this->ttl ){
@@ -65,9 +65,9 @@ class CacheService{
     protected function inExceptArray($url)
     {
         foreach ($this->byPassRoutes as $except) {
-            if ($except !== '/') {
-                $except = trim($except, '/');
-            }
+            // if ($except !== '/') {
+            //     $except = trim($except, '/');
+            // }
 
             /**
              * Check if match has astrix
@@ -94,4 +94,14 @@ class CacheService{
         return false;
     }
 
+    /**
+     * Check if request is json Request
+     */
+    protected  function isAjax(){
+        if ( strpos($_SERVER['HTTP_ACCEPT'],'application/json') || $_SERVER['HTTP_X_REQUESTED_WITH'] ==='XMLHttpRequest' ){
+            return true;
+        }
+
+        return false;
+    }
 }
