@@ -99,9 +99,9 @@ class CacheService{
      */
     protected  function isAjax(){
         if ( strpos($_SERVER['HTTP_ACCEPT'],'application/json') ){
-            if ( isset($_SERVER['HTTP_X_REQUESTED_WITH'] ) &&  $_SERVER['HTTP_X_REQUESTED_WITH'] ==='XMLHttpRequest'){
-                return true;
-            }
+            return true;
+        }
+        if ( isset($_SERVER['HTTP_X_REQUESTED_WITH'] ) &&  $_SERVER['HTTP_X_REQUESTED_WITH'] ==='XMLHttpRequest'){
             return true;
         }
 
