@@ -80,7 +80,7 @@ class CacheService{
             if ( strpos($except,"*") ){
                 $except = str_replace("*",".*",$except);
 
-                if (preg_match("/".$except."/",$url)){
+                if (preg_match("/\/".$except."/",$url)){
                     return true;
                 }
             /**
